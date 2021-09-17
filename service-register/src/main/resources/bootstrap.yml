@@ -1,8 +1,10 @@
+server:
+  port: 8761
 spring:
   application:
     name: service-register
   cloud:
     config:
-      uri: http://localhost:9000
-      username: admin
-      password: admin
+      uri: http://localhost:8888
+#      username: admin
+#      password: admin
