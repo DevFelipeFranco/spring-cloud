@@ -8,10 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/DevFelipeFranco/microservice-config-server
-          clone-on-start: true
-          username:
-          password:
+          uri: https://github.com/DevFelipeFranco/microservice-config-server.git
   security:
     user:
       name: felipe

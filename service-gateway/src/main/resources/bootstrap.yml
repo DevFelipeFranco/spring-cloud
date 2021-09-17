@@ -12,13 +12,13 @@ spring:
           '[/**]':
             allowedOrigins: "http://localhost:4200"
             allowedMethods: "*"
-          add-to-simple-url-handler-mapping: tru
+        add-to-simple-url-handler-mapping: true
       discovery:
         locator:
           lower-case-service-id: true
       routes:
         - id: service-customer
-          url: lb://service-customer
+          uri: lb://service-customer
           predicates:
             - Path=/customer/**
 

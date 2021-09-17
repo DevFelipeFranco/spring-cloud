@@ -18,7 +18,8 @@ dependencies {
     // https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-starter-client
     implementation 'de.codecentric:spring-boot-admin-starter-client:2.3.1'
 
-    runtimeOnly 'com.h2database:h2'
+//    runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'mysql:mysql-connector-java'
 }
 
 dependencyManagement {
