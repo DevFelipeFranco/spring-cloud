@@ -3,6 +3,31 @@ spring:
     name: service-gateway
   cloud:
     config:
-      uri: http://localhost:9000
-      username: admin
-      password: admin
+      uri: http://localhost:8888
+      username: felipe
+      password: franco
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods: "*"
+          add-to-simple-url-handler-mapping: tru
+      discovery:
+        locator:
+          lower-case-service-id: true
+      routes:
+        - id: service-customer
+          url: lb://service-customer
+          predicates:
+            - Path=/customer/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${random.uuid}

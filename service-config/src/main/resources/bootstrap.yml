@@ -9,10 +9,13 @@ spring:
       server:
         git:
           uri: https://github.com/DevFelipeFranco/microservice-config-server
+          clone-on-start: true
           username:
           password:
-          clone-on-start: true
-
+  security:
+    user:
+      name: felipe
+      password: franco
 #spring:
 #  application:
 #    name: service-config

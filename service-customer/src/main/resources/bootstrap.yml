@@ -3,6 +3,6 @@ spring:
     name: service-customer
   cloud:
     config:
-      uri: http://localhost:9000
-      username: admin
-      password: admin
+      uri: http://localhost:8888
+      username: felipe
+      password: franco
